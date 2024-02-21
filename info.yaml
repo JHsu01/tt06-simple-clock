@@ -3,7 +3,7 @@ project:
   title:        "TT6 Simple Clock"      # Project title
   author:       "Joseph Hsu"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Simple Configurable Clock"      # One line description of what your project does
+  description:  "This is a very simple, configurable clock. By default it's 20 MHz, but it can be configured to 10/12/14 Mhz."      # One line description of what your project does
   language:     "SystemVerilog, TL-Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     20_000_000      # Clock frequency in Hz (or 0 if not applicable)
 
