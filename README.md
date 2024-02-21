@@ -1,41 +1,33 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg)
 
-# Tiny Tapeout Verilog Project Template
+# A Simple, Configurable Clock 
 
-- [Read the documentation for project](docs/info.md)
+## A small introduction
+This was a project for Tiny Tapeout 6- done during the ChipCraft: Art of Chip Design course taught in Febuary of 2024
 
-## What is Tiny Tapeout?
+The code included in this submission is as follows:
+- project.v
+- makerchip_file.tlv
 
-TinyTapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip.
+## Description
+This is an implementation of a simple, configurable clock on a 2 7-segment display. 
 
-To learn more and get started, visit https://tinytapeout.com.
+By default, this clock is set to keep accurate time at 20 MHz ( the clock of the FPGA used during testing was 20 MHz), but can be configured to run at 10, 12, and 14 MHz depending on what input pins are switched on.
 
-## Verilog Projects
 
-1. Add your Verilog files to the `src` folder.
-2. Edit the [info.yaml](info.yaml) and update information about your project, paying special attention to the `source_files` and `top_module` properties. If you are upgrading an existing Tiny Tapeout project, check out our [online info.yaml migration tool](https://tinytapeout.github.io/tt-yaml-upgrade-tool/).
-3. Edit [docs/info.md](docs/info.md) and add a description of your project.
-4. Optionally, add a testbench to the `test` folder. See [test/README.md](test/README.md) for more information.
+- `Input switch 1* = 10 MHz`
+- `Input switch 2 = 12 MHz`
+- `Input switch 3 = 14 MHz`
 
-The GitHub action will automatically build the ASIC files using [OpenLane](https://www.zerotoasiccourse.com/terminology/openlane/).
+*Please note that input pins are 0 indexed, and I do mean input switch 1, even though its technically the 2nd switch in the input array
 
-## Enable GitHub actions to build the results page
+In the makerchip_file.tlv, this is what the `$frequency` mux essentially selects
 
-- [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
+## Cool Project. How can I use it?
 
-## Resources
+Feel free to copy this repo and make changes as you see fit! Would love for you to build off of this. You have my blessing. 
 
-- [FAQ](https://tinytapeout.com/faq/)
-- [Digital design lessons](https://tinytapeout.com/digital_design/)
-- [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
-- [Join the community](https://tinytapeout.com/discord)
-- [Build your design locally](https://docs.google.com/document/d/1aUUZ1jthRpg4QURIIyzlOaPWlmQzr-jBn3wZipVUPt4)
+I'd suggest downloading and opening up the makerchip_file.tlv in [makerchip IDE](https://makerchip.com/sandbox/) and then editing from there. 
 
-## What next?
 
-- [Submit your design to the next shuttle](https://app.tinytapeout.com/).
-- Edit [this README](README.md) and explain your design, how it works, and how to test it.
-- Share your project on your social network of choice:
-  - LinkedIn [#tinytapeout](https://www.linkedin.com/search/results/content/?keywords=%23tinytapeout) [@TinyTapeout](https://www.linkedin.com/company/100708654/)
-  - Mastodon [#tinytapeout](https://chaos.social/tags/tinytapeout) [@matthewvenn](https://chaos.social/@matthewvenn)
-  - X (formerly Twitter) [#tinytapeout](https://twitter.com/hashtag/tinytapeout) [@matthewvenn](https://twitter.com/matthewvenn)
+
